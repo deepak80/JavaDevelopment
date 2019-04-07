@@ -1,0 +1,11 @@
+Speciality of Java enum
+------------------------
+In old languages, Inside an enum we can take only constants but in java enum in addition of constants we can take methods, normal variables etc. Hence java enum is more powerfull than old languages enum.
+
+Even we can declare main method inside enum and can be directly executed by using command prompt.
+
+
+In addition of constants, if we are taking any extra member like method then compulsory list of constants should be in the first line and ends with semicolon.
+
+
+  
