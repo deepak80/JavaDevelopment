@@ -1,0 +1,188 @@
+﻿D:\JavaDev_Package\Java Package and Developement\ModifiresWithPackages\src\com\sis\raipur>javac -d . Parent.java
+
+D:\JavaDev_Package\Java Package and Developement\ModifiresWithPackages\src\com\sis\raipur>tree/f
+Folder PATH listing for volume New Volume
+Volume serial number is EE98-E1F5
+D:.
+│   Child1.java
+│   Other1.java
+│   Parent.java
+│
+└───com
+    └───sis
+        └───raipur
+                Parent.class
+
+
+-------------------------------------------------------------------------------------
+
+D:\JavaDev_Package\Java Package and Developement\ModifiresWithPackages\src\com\sis\raipur>javac -d .. Parent.java
+
+D:\JavaDev_Package\Java Package and Developement\ModifiresWithPackages\src\com\sis\raipur>cd..
+
+D:\JavaDev_Package\Java Package and Developement\ModifiresWithPackages\src\com\sis>tree/f
+Folder PATH listing for volume New Volume
+Volume serial number is EE98-E1F5
+D:.
+├───com
+│   └───sis
+│       └───raipur
+│               Parent.class
+│
+├───mumbai
+│       Child2.java
+│       Other2.java
+│
+└───raipur
+    │   Child1.java
+    │   Other1.java
+    │   Parent.java
+    │
+    └───com
+        └───sis
+            └───raipur
+                    Parent.class
+
+-------------------------------------------------------------------------------------
+
+
+D:\JavaDev_Package\JavaPackageandDevelopement\ModifiresWithPackages\src\com\sis\raipur>javac -d D:\JavaDev_Package\JavaPackageandDevelopement\ModifiresWithPackages\classes Parent.java
+
+D:\JavaDev_Package\JavaPackageandDevelopement\ModifiresWithPackages\src\com\sis\raipur>cd../../../
+
+D:\JavaDev_Package\JavaPackageandDevelopement\ModifiresWithPackages\src>cd ..
+
+D:\JavaDev_Package\JavaPackageandDevelopement\ModifiresWithPackages>tree/f
+Folder PATH listing for volume New Volume
+Volume serial number is EE98-E1F5
+D:.
+│   CompileAndDirectoryStructure.txt
+│   DirectoryStructure.txt
+│
+├───classes
+│   └───com
+│       └───sis
+│           └───raipur
+│                   Parent.class
+│
+└───src
+    └───com
+        └───sis
+            ├───mumbai
+            │       Child2.java
+            │       Other2.java
+            │
+            └───raipur
+                    Child1.java
+                    Other1.java
+                    Parent.java
+-----------------------------------------------------------------------------------
+
+
+D:\JavaDev_Package\JavaPackageandDevelopement\ModifiresWithPackages\src\com\sis\raipur>javac -cp D:\JavaDev_Package\JavaPackageandDevelopement\ModifiresWithPackages\classes Child1.java
+Child1.java:4: error: a has private access in Parent
+                System.out.println("this.a="+a);
+                                             ^
+1 error
+-----------------------------------------------------------------------------------
+D:\JavaDev_Package\JavaPackageandDevelopement\ModifiresWithPackages\src\com\sis\raipur>javac -cp D:\JavaDev_Package\JavaPackageandDevelopement\ModifiresWithPackages\classes Other1.java
+Other1.java:5: error: a has private access in Parent
+                System.out.println("p.a="+p.a);
+                                           ^
+1 error
+------------------------------------------------------------------------------------
+D:\JavaDev_Package\JavaPackageandDevelopement\ModifiresWithPackages\src\com\sis\mumbai>javac -cp D:\JavaDev_Package\JavaPackageandDevelopement\ModifiresWithPackages\classes Child2.java
+Child2.java:5: error: a has private access in Parent
+                System.out.println("this.a="+a);
+                                             ^
+Child2.java:8: error: d is not public in Parent; cannot be accessed from outside package
+                System.out.println("this.d="+d);
+                                             ^
+2 errors
+------------------------------------------------------------------------------------
+D:\JavaDev_Package\JavaPackageandDevelopement\ModifiresWithPackages\src\com\sis\mumbai>javac -cp D:\JavaDev_Package\JavaPackageandDevelopement\ModifiresWithPackages\classes Other2.java
+Other2.java:6: error: a has private access in Parent
+                System.out.println("p.a="+p.a);
+                                           ^
+Other2.java:8: error: c has protected access in Parent
+                System.out.println("p.c="+p.c);
+                                           ^
+Other2.java:9: error: d is not public in Parent; cannot be accessed from outside package
+                System.out.println("p.d="+p.d);
+                                           ^
+3 errors
+-------------------------------------------------------------------------------------
+
+After successfully compilation of source files present inside raipur package.
+
+
+D:\JavaDev_Package\JavaPackageandDevelopement\ModifiresWithPackages>tree/f
+Folder PATH listing for volume New Volume
+Volume serial number is EE98-E1F5
+D:.
+│   Child1Compilation.PNG
+│   CompilationOther1.PNG
+│   CompileAndDirectoryStructure.txt
+│   DirectoryStructure.txt
+│   MustSeeError.PNG
+│
+├───classes
+│   └───com
+│       └───sis
+│           └───raipur
+│                   Child1.class
+│                   Other1.class
+│                   Parent.class
+│
+└───src
+    └───com
+        └───sis
+            ├───mumbai
+            │       Child2.java
+            │       Other2.java
+            │
+            └───raipur
+                    Child1.java
+                    Other1.java
+                    Parent.java
+-------------------------------------------------------------------------------------
+
+After successfully compilation of Child2.java and Other2.java. which are available in outside package.
+
+D:\JavaDev_Package\JavaPackageandDevelopement\ModifiresWithPackages>tree/f
+Folder PATH listing for volume New Volume
+Volume serial number is EE98-E1F5
+D:.
+│   Child1Compilation.PNG
+│   CompilationChild2FromOutsidePackage.PNG
+│   CompilationOther1.PNG
+│   CompilationOther2FromOutsidePackage.PNG
+│   CompileAndDirectoryStructure.txt
+│   DirectoryStructure.txt
+│   MustSeeError.PNG
+│
+├───classes
+│   └───com
+│       └───sis
+│           ├───mumbai
+│           │       Child2.class
+│           │       Other2.class
+│           │
+│           └───raipur
+│                   Child1.class
+│                   Other1.class
+│                   Parent.class
+│
+└───src
+    └───com
+        └───sis
+            ├───mumbai
+            │       Child2.java
+            │       Other2.java
+            │
+            └───raipur
+                    Child1.java
+                    Other1.java
+                    Parent.java
+-------------------------------------------------------------------------------------
+ 
