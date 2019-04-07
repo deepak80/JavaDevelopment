@@ -1,0 +1,21 @@
+﻿ProjectStructure
+├───classes
+├───Reference
+│       ProjectStructure.txt
+│
+└───src
+    └───com
+        └───sis
+            └───FlowerShop
+                │   MainStart.java
+                │
+                ├───Flower
+                │       Lily.java
+                │       Rose.java
+                │
+                └───Fruit
+                    │   Apple.java
+                    │   Banana.java
+                    │
+                    └───Kashmiri
+                            Apple.java
