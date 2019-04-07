@@ -1,0 +1,15 @@
+requirements of the our program
+
+\' gives '
+\" gives "
+job\carrer to escape the meaning of the \ use job\\carrer  gives job\career
+
+old\new gives error   to remove error use old\\new gives old\new
+
+
+Alt+1 ?
+Alt+2 ?
+
+\8 and \9 gives COMPILE TIME ERROR
+
+JAVAC *.JAVA      
