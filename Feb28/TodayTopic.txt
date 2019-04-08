@@ -1,0 +1,6 @@
+How to create an Object.
+How to assign a value.
+How to access a value of object.
+How to update value of Object.
+How to call a method using object.
+How to create an seperate class and use it from another class.
